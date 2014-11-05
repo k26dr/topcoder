@@ -61,7 +61,10 @@ class MakingPotions:
             return 1000000001
         return prices["LOVE"]
 
-# tests
+
+#################################################################
+# Tests
+
 m = MakingPotions()
 tests = []
 answers = []
@@ -101,7 +104,6 @@ tests.append({'marketGoods': ["MILK","WATER","HOP"], 'cost': [6,1,14],
 answers.append(110)
 
 for i in range(len(tests)):
-    print(m.getCost(**tests[i]))
     assert m.getCost(**tests[i]) == answers[i]
 
 print("Passed all tests")
